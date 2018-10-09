@@ -5,8 +5,9 @@ import App from "./App";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faShoppingCart,
-  faAlignJustify
+  faAlignJustify,
+  faCartPlus
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faShoppingCart, faAlignJustify);
+library.add(faShoppingCart, faAlignJustify, faCartPlus);
 ReactDOM.render(<App />, document.getElementById("root"));
