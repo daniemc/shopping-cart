@@ -7,3 +7,7 @@ Colors {
   orange: #FE5104
 }
 */
+
+.content {
+  display: flex;
+}

@@ -4,7 +4,6 @@ import CartIcon from "./CartIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class NavBar extends Component {
-  state = {};
   render() {
     return (
       <div className="navbar">
@@ -12,6 +11,7 @@ class NavBar extends Component {
           className="navbar-menu-icon"
           icon="align-justify"
           size="2x"
+          onClick={this.props.onMenuToggle}
         />
         <CartIcon />
       </div>
