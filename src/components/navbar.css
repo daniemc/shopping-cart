@@ -1,0 +1,17 @@
+.navbar {
+  background-color: #050802;
+  height: 60px;
+  display: flex;
+}
+
+.shopping-cart-icon {
+  padding: 15px;
+  position: fixed;
+  right: 10px;
+}
+
+.navbar-menu-icon {
+  cursor: pointer;
+  padding: 15px;
+  color: #fff;
+}

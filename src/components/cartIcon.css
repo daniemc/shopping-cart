@@ -1,0 +1,19 @@
+.shopping-cart-icon {
+  padding: 15px;
+  position: fixed;
+  right: 10px;
+}
+
+.shopping-cart-link {
+  text-decoration: none;
+  color: #fe5104;
+}
+
+.shopping-cart-count {
+  position: relative;
+  top: -20px;
+  font-weight: 700;
+  font-size: 20px;
+  left: 2px;
+  color: #fe5104;
+}
