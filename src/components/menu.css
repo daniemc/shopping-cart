@@ -14,3 +14,17 @@
     transform: translateX(0);
   }
 }
+
+.menu-list-item {
+  background-color: #050802;
+  margin: 10px;
+  padding: 5px;
+  height: 30px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-list-item:hover {
+  background-color: #625e4ad9;
+}

@@ -6,10 +6,8 @@ class Menu extends Component {
   render() {
     return (
       <div className="menu">
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-        </ul>
+        <div className="menu-list-item">Ver carrito</div>
+        <div className="menu-list-item">Ver productos</div>
       </div>
     );
   }
