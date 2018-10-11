@@ -8,9 +8,10 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <FontAwesomeIcon
-          className="navbar-menu-icon"
+          className="navbar-menu-icon rotate"
           icon="align-justify"
           size="2x"
+          rotation={this.props.menuIsOpen && 90}
           onClick={this.props.onMenuToggle}
         />
         <CartIcon />

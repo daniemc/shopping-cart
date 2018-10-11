@@ -18,9 +18,12 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <NavBar onMenuToggle={this.handleMenuToggle} />
+        <NavBar
+          menuIsOpen={this.state.menuIsOpen}
+          onMenuToggle={this.handleMenuToggle}
+        />
         <div className="content">
-          {this.state.menuIsOpen && <Menu />}
+          {this.state.menuIsOpen && <Menu open={this.state.menuIsOpen} />}
           <ShoppingPage />
         </div>
       </div>
