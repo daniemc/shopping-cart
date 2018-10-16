@@ -8,6 +8,11 @@ Colors {
 }
 */
 
-.content {
+.container {
   display: flex;
+}
+
+.sidebar-menu {
+  max-width: 15%;
+  min-width: 15%;
 }
