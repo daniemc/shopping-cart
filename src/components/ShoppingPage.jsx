@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Product from "./Product";
 import "./shoppingpage.css";
 import store from "../store";
+import { addToCart } from "../actionCreators";
 
 class ShoppingPage extends Component {
   state = {
@@ -174,10 +175,7 @@ class ShoppingPage extends Component {
   }
 
   addToCart(product) {
-    store.dispatch({
-      type: "ADD_TO_CART",
-      product
-    });
+    store.dispatch(addToCart(product));
   }
 }
 
