@@ -8,6 +8,13 @@ import {
   faAlignJustify,
   faCartPlus
 } from "@fortawesome/free-solid-svg-icons";
+import store from "./store";
+import { Provider } from "react-redux";
 
 library.add(faShoppingCart, faAlignJustify, faCartPlus);
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store} >
+    <App /> 
+  </Provider>,
+  document.getElementById("root")
+);
