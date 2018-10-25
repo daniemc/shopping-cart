@@ -1,10 +1,23 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./cartIcon.css";
+import store from "../store";
+
 class CartIcon extends Component {
-  state = {
-    productsInCart: 0
-  };
+  constructor() {
+    super();
+
+    this.state = {
+      productsInCart: 0
+    };
+
+    store.subscribe(() => {
+      this.setState({
+        productsInCart: store.getState().cart.length
+      });
+    });
+
+  }
   render() {
     return (
       <div className="shopping-cart-icon">

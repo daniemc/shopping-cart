@@ -23,11 +23,16 @@ class Product extends Component {
             <FontAwesomeIcon
               className="product-info-add-to-cart"
               icon="cart-plus"
+              onClick={ () => this.onAddToCart(this.props.product) }
             />
           </div>
         </div>
       </div>
     );
+  }
+
+  onAddToCart(product) {
+    this.props.handleAddToCart(product);
   }
 }
 

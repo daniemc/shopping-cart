@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import "./shoppingpage.css";
+import store from "../store";
 
 class ShoppingPage extends Component {
   state = {
@@ -144,10 +145,17 @@ class ShoppingPage extends Component {
       <div className="shopping-page">
         {this.state.products.length > 0 &&
           this.state.products.map(product => (
-            <Product key={product.id} product={product} />
+            <Product key={product.id} product={product} handleAddToCart={this.addToCart} />
           ))}
       </div>
     );
+  }
+
+  addToCart(product) {
+    store.dispatch({
+      type: "ADD_TO_CART",
+      product
+    });
   }
 }
 
