@@ -10,6 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import store from "./store";
 import { Provider } from "react-redux";
+import { fetchProducts } from './actionCreators';
+
+store.dispatch(fetchProducts());
 
 library.add(faShoppingCart, faAlignJustify, faCartPlus);
 ReactDOM.render(

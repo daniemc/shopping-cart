@@ -1,7 +1,13 @@
 import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
 
 const reducer = (state, action) => {
-    if (action.type === "ADD_TO_CART") {
+    if (action.type === "FETCH_PRODUCTS") {
+        return {
+         ...state,
+         products: action.products  
+        };
+    } else if (action.type === "ADD_TO_CART") {
         const productInCart = state
         .cart
         .filter(product => product.id === action.product.id);
@@ -29,4 +35,4 @@ const reducer = (state, action) => {
 const logger = store => next => action => next(action);    
 
 
-export default createStore(reducer, { cart: [] }, applyMiddleware(logger));
+export default createStore(reducer, { cart: [], products: [] }, applyMiddleware(logger, reduxThunk));
